@@ -86,6 +86,8 @@ module Tumblargh
       class Link < Post
       end
 
+      class More < Base
+      end
 
       # Meta-block for Appearance booleans, like {block:IfSomething}
       class Boolean < Base

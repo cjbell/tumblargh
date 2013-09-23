@@ -7,6 +7,7 @@
 
       def initialize(node, context, config)
         @config = config.with_indifferent_access
+        
         super(node, context)
       end
 
@@ -55,7 +56,7 @@
       end
 
       def custom_value_for_type(type, key)
-        config[type][key] rescue raise "No appearance option for #{type}:#{key}"
+        config[type][key.downcase] rescue raise "No appearance option for #{type}:#{key}"
       end
 
       # END TAGS ------
